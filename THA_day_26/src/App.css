@@ -1,0 +1,75 @@
+.App {
+  font-size: 1rem;
+  min-height: 50vmin;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.App::after,
+#output::after,
+#input::after {
+  content: "App";
+  position: absolute;
+  top: -0.8rem;
+  left: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(0, 255, 0, 0.5);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.1rem;
+  z-index: 2;
+}
+
+.App,
+section {
+  border: 2px solid rgba(0, 255, 0, 0.25);
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+section {
+  width: 90%;
+  padding: 2rem 1rem;
+}
+
+#output {
+  border-color: RGBA(255, 255, 0, 0.25);
+}
+
+#output::after {
+  content: "Data";
+  background-color: RGBA(255, 255, 0, 0.5);
+}
+
+#input {
+  border-color: rgba(154, 18, 179, 0.45);
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+#input::after {
+  content: "Form";
+  background-color: rgba(154, 18, 179, 0.5);
+}
+
+/* Special Inputs */
+input {
+  background-color: #111;
+  color: #eee;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
