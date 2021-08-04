@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Day 46 of 100DaysOfCSS</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div id="gridbox" class="grid"></div>
+        </div>
+    </div>
+    <script>
+        const drawPixels = [
+            7, 8, 9, 10, 11, 12, 13, 14,
+            121, 128, 130, 140,
+            141, 149, 151, 160,
+            161, 169, 172, 180,
+            181, 189, 193, 200,
+            201, 209, 213, 220,
+            221, 229, 232, 240,
+            241, 249, 251, 260,
+            261, 268, 270, 280,
+            387, 388, 389, 390, 391, 392, 393, 394
+        ]
+
+        const gridClass = document.getElementById('gridbox')
+        for(let i = 1; i<= 400; i++){
+        	let pixel = document.createElement('div');
+        	pixel.setAttribute('id', i)
+        	pixel.setAttribute('class', 'pixel');
+        	pixel.addEventListener('click', () => {
+        pixel.classList.toggle("selected");
+        	});
+        	gridClass.appendChild(pixel);
+        }
+
+        drawPixels.forEach(pixelId => {
+        	document.getElementById(pixelId).classList.add('selected');
+        });
+    </script>
+</body>
+</html>
