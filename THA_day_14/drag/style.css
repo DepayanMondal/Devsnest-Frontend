@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 400px;
+    width: 402px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto;
+}
+
+.container .box {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    background: #eee;
+}
+
+.container .box .item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background: #ccc;
+}

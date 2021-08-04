@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+button {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 130%;
+    padding: 10px;
+}
