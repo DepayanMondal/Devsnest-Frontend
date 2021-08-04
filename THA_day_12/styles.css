@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #3d3e49;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+main {
+  max-width: 1024px;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.tasks {
+  height: 90%;
+  width: 100%;
+  background-color: #222128;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tasks .task {
+  width: 90%;
+  background-color: #292a33;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tasks .task .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+
+.tasks .task .details .status {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.tasks .task .details .title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 0.5em;
+}
+
+.tasks .task .actions {
+  width: 20%;
+  text-align: right;
+}
+
+.tasks .task .actions img {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.tasks .complete {
+  border-left: 0.4em solid #1dc1c3;
+}
+
+.tasks .complete .details .status {
+  color: #1dc1c3;
+}
+
+.tasks .incomplete {
+  border-left: 0.4em solid #aa3d55;
+}
+
+.tasks .incomplete .details .status {
+  color: #aa3d55;
+}
+
+.add-tasks {
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  padding: 0.2em;
+}
+
+.add-tasks input {
+  font-size: 1.2em;
+}
+
+.add-tasks input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.add-tasks input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.add-tasks input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.add-tasks input::placeholder {
+  text-align: center;
+}
+
+.add-tasks .add-btn {
+  margin: 0 auto;
+  margin-top: 0.4em;
+  padding: 0.6em 0.8em 0.6em 0.8em;
+  background-color: #3168e0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.strike {
+  text-decoration: line-through;
+  font-weight: 400 !important;
+}
+/*# sourceMappingURL=styles.css.map */
