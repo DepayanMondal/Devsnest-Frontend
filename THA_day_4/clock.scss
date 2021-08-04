@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background-color: #264653;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #2A9D8F;
+    box-sizing: border-box;
+    border-radius: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+}
+.hourHand {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    animation: time 86400s infinite linear;
+    &:before {
+        position: absolute;
+        content: "";
+        background-color: #E9C46A;
+        height: 40px;
+        width: 5px;
+        top: 100px;
+    }
+    z-index: 1;
+}
+
+.minuteHand {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    animation: time 3600s infinite linear;
+    &:before {
+        position: absolute;
+        content: "";
+        background-color: #F4A261;
+        height: 60px;
+        width: 4px;
+        top: 80px;
+    }
+    z-index: 2;
+}
+
+.secondHand {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 60s infinite linear;
+    &:before {
+        position: absolute;
+        content: "";
+        background-color: #e63946;
+        height: 100px;
+        width: 3px;
+        top: 60px;
+    }
+    z-index: 3;
+}
+
+.cap {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #264653;
+    z-index: 4;
+}
+
+@keyframes time {
+    to {
+      transform: rotate(360deg);
+    }
+}

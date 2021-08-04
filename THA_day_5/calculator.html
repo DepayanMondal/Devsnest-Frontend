@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 95vh;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 20px;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin: 10px 0px 5px 0px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            border: 0.2em solid teal;
+        }
+        input::placeholder {
+            text-align: center;
+        }
+        .buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        button {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: teal;
+            border: none;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        #ans {
+            font-size: 3em;
+        }
+        #output {
+            width: 100%;
+            min-height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid white; */
+        }
+        /* For removing arrows of input=number */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <input id="op1" type="number" name="operand1" placeholder="Enter the first number"/>
+        <input id="op2" type="number" name="operand2" placeholder="Enter the second number"/>
+        <div class="buttons">
+            <button onclick="calulate('+')">+</button>
+            <button onclick="calulate('-')">-</button>
+            <button onclick="calulate('*')">*</button>
+            <button onclick="calulate('/')">/</button>
+            <button onclick="calulate('^')">^</button>
+        </div>
+        <div id="output"><span id="ans"></span></div>
+    </section>
+    <script>
+        function calulate(op) {
+            operand1 = document.getElementById('op1')
+            operand2 = document.getElementById('op2')
+            if(operand1.value === "") {
+                operand1.placeholder = "Enter an Integer here!"
+                operand1.style.border = "2px solid red"
+                operand1.focus()
+                return
+            } else operand1.style.border = "0.2em solid teal"
+            if(operand2.value === "") {
+                operand2.placeholder = "Enter an Integer here!"
+                operand2.style.border = "2px solid red"
+                operand2.focus()
+                return
+            } else operand2.style.border = "0.2em solid teal"
+
+            operand1 = parseInt(operand1.value)
+            operand2 = parseInt(operand2.value)
+            let ans;
+            switch(op){
+                case '+':
+                    ans = operand1 + operand2;
+                    break;
+                case '-':
+                    ans = operand1 - operand2;
+                    break;
+                case '*':
+                    ans = operand1 * operand2;
+                    break;
+                case '/':
+                    ans = operand1 / operand2;
+                    break;
+                case '^':
+                    ans = operand1 ** operand2;
+                    break;
+            }
+            document.getElementById('ans').innerHTML = ans;
+        }
+    </script>
+</body>
+</html>

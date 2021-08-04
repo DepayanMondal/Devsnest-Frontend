@@ -1,0 +1,15 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #0a192f;
+  max-width: 720px;
+  color: #ccd6f6;
+  margin: 0 auto;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    margin: 10px 20px 30px 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
